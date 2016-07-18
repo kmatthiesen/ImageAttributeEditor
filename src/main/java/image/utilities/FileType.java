@@ -10,7 +10,7 @@ public enum FileType {
     PNG("png"),
     GIF("gif");
 
-    private String type;
+    public final String type;
 
     FileType(String type) {
         this.type = type;

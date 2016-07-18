@@ -1,6 +1,7 @@
 package image.view;
 
 import image.utilities.Common;
+import image.utilities.FileType;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,8 +12,16 @@ import java.awt.*;
 public class Thumbnail extends JLabel {
 
     public static final int SIZE = 90;
+    private FileType format;
 
     public Thumbnail(){
     }
 
+    public void setFormat(FileType format) {
+        this.format = format;
+    }
+
+    public FileType getFormat() {
+        return format;
+    }
 }

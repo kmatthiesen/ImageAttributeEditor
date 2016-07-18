@@ -79,7 +79,7 @@ public class MainWindow extends JFrame {
             if (type.getType().equalsIgnoreCase(filePath[filePath.length - 1])) {
                 try {
                     BufferedImage bufferedImage = ImageIO.read(file);
-                    ImageContainer container = new ImageContainer(bufferedImage);
+                    ImageContainer container = new ImageContainer(bufferedImage, type);
                     imageContainers.add(container);
                     return container.getThumbnail();
                 } catch (IOException e) {
@@ -88,13 +88,6 @@ public class MainWindow extends JFrame {
             }
         }
         return null;
-    }
-
-    public void mouseClicked(MouseEvent event)
-    {
-        if (event.getClickCount() == 2) {
-            System.out.println("double clicked");
-        }
     }
 
     private void initComponents() {
